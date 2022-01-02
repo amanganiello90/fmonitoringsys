@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<libri>
+	<libro>
+		<autore>J.K.Rowlings</autore>
+		<titolo>Harry Potter e la pietra filosofale</titolo>
+		<editore>Salani</editore>
+	</libro>
+	<libro>
+		<autore>J.R.Tolkien</autore>
+		<titolo>Il signore degli Anelli</titolo>
+		<editore>Bonpiani</editore>
+	</libro>
+</libri>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>  
+<title>Monitoring System Application </title>
+</head>
+<body>
+
+<h1>Benvenuto nel sistema di monitoraggio cartelle</h1>
+<h2>E' un microservizio con lo scopo di monitorare il contenuto della cartella del progetto <strong>"src/main/resources/checkFolder"</strong></h2>
+
+<p style="color:brown;" >Sono esposte due web REST api:</p>
+
+<ol>
+    <li><strong>/fmonitoringsys/api/filesinfo?start=YOUR_START_DATE_TIME&end=YOUR_END_DATE_TIME </strong>: restituisce tutte le informazioni dei file contenuti nella cartella di controllo, che ricadono nell'intervallo delle dateTime</li>
+    <li><strong>/fmonitoringsys/api/file?md5=YOUR_MD5_CHECKSUM </strong>: restituisce le informazioni del file contenuto nella cartella monitorata, che corrisponde alla stringa MD5 passata</li>
+</ol>
+
+  <p>Attenzione alle <strong>dateTime</strong> : il formato deve essere <strong>yyyy-mm-ddThh:mm:ss</strong></p>
+
+  <p style="color:green;">Di seguito esempi con risultato ottenuto dalla ricerca:</p>
+
+  <ol>
+    <li><a href="http://localhost:8080/fmonitoringsys/api/filesinfo?start=2015-09-26T01:30:00.000&end=2030-09-26T01:30:00.000"> http://localhost:8080/fmonitoringsys/api/filesinfo?start=2015-09-26T01:30:00.000&end=2030-09-26T01:30:00.000</a></li>
+    <li><a href="http://localhost:8080/fmonitoringsys/api/file?md5=d8c2984c1312a1ed8a483357f0caff5f">http://localhost:8080/fmonitoringsys/api/file?md5=d8c2984c1312a1ed8a483357f0caff5f"</a></li>
+</ol>
+
+<p style="color:red;" >Di seguito esempi con nessun risultato ottenuto dalla ricerca:</p>
+
+<ol>
+  <li><a href="http://localhost:8080/fmonitoringsys/api/filesinfo?start=2015-09-26T01:30:00.000&end=2016-09-26T01:30:00.000"> http://localhost:8080/fmonitoringsys/api/filesinfo?start=2015-09-26T01:30:00.000&end=2016-09-26T01:30:00.000</a></li>
+  <li><a href="http://localhost:8080/fmonitoringsys/api/file?md5=sfc4984c1g12g1hd8j48y65ef0caff5"> http://localhost:8080/fmonitoringsys/api/file?md5=sfc4984c1g12g1hd8j48y65ef0caff5</a></li>
+</ol>
+
+</body>
+</html>
